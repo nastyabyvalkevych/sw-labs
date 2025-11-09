@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Волонтерство — Microdata приклад</title>
+  <style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+       color:#1f2937;background:#f9fafb}
+  header,section,footer{max-width:980px;margin:0 auto;padding:24px}
+  header{background:#ffffff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:10}
+  h1{margin:0 0 8px;color:#0f172a}
+  h2{margin:0 0 8px;color:#111827}
+  p{margin:0 0 10px}
+  .muted{color:#475569}
+  .card{background:#ffffff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:12px 0}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media (min-width:768px){.grid{grid-template-columns:1fr 1fr}}
+  a{color:#2563eb;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .tag{display:inline-block;background:#eef2ff;color:#3730a3;border:1px solid #e0e7ff;
+       border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Волонтерський центр “Добрі Руки”</h1>
+  <p class="muted">Приклад сторінки з анотаціями <strong>Microdata</strong>.</p>
+</header>
+
+<section class="card" itemscope itemtype="https://schema.org/NGO">
+  <h2><span itemprop="name">ГО “Добрі Руки”</span></h2>
+  <p itemprop="description">
+    Ми координуємо благодійні збори, гуманітарну допомогу та волонтерські події по всій Україні.
+  </p>
+  <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <p><strong>Адреса:</strong> <span itemprop="streetAddress">вул. Світла, 5</span>, 
+    <span itemprop="addressLocality">Київ</span></p>
+  </div>
+  <p><strong>Телефон:</strong> <a href="tel:+380441112233" itemprop="telephone">+380 44 111 22 33</a></p>
+  <p><strong>Сайт:</strong> <a href="https://example.org/dobri-ruky" itemprop="url">example.org/dobri-ruky</a></p>
+</section>
+
+<section class="grid">
+  <!-- Event 1 -->
+  <article class="card" itemscope itemtype="https://schema.org/Event">
+    <h2><span itemprop="name">Суботній сортувальний хаб</span></h2>
+    <p itemprop="description">Потрібні волонтери для сортування гуманітарної допомоги.</p>
+    <p><strong>Коли:</strong> <time itemprop="startDate" datetime="2025-11-15T10:00:00+02:00">15 листопада, 10:00</time></p>
+    <p itemprop="location" itemscope itemtype="https://schema.org/Place">
+      <strong>Локація:</strong> <span itemprop="name">Склад “Світлий”</span>,
+      <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="addressLocality">Київ</span>
+      </span>
+    </p>
+    <link itemprop="eventStatus" href="https://schema.org/EventScheduled" />
+    <meta itemprop="isAccessibleForFree" content="true" />
+    <p><a itemprop="url" href="https://example.org/events/sorting-hub">Деталі та реєстрація</a></p>
+  </article>
+
+  <!-- Event 2 -->
+  <article class="card" itemscope itemtype="https://schema.org/Event">
+    <h2><span itemprop="name">Освітня акція у ліцеї</span></h2>
+    <p itemprop="description">Майстер-клас з безпеки та перша допомога для підлітків.</p>
+    <p><strong>Коли:</strong> <time itemprop="startDate" datetime="2025-11-20T14:00:00+02:00">20 листопада, 14:00</time></p>
+    <p itemprop="location" itemscope itemtype="https://schema.org/Place">
+      <strong>Локація:</strong> <span itemprop="name">Ліцей №12</span>,
+      <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="addressLocality">Львів</span>
+      </span>
+    </p>
+    <link itemprop="eventStatus" href="https://schema.org/EventScheduled" />
+    <meta itemprop="isAccessibleForFree" content="true" />
+    <p><a itemprop="url" href="https://example.org/events/education-lyceum">Деталі та реєстрація</a></p>
+  </article>
+</section>
+
+<footer>
+  <section class="card">
+    <h2>Що таке Microdata?</h2>
+    <p>Microdata додає атрибути <code>itemscope</code>, <code>itemtype</code> та <code>itemprop</code> безпосередньо у DOM.</p>
+  </section>
+  <p style="padding:12px 24px">© 2025 Добрі Руки</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ex="http://example.org/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://example.org/CadeAddress">
+    <ex:street>1516 Henry Street</ex:street>
+    <ex:city>Berkeley</ex:city>
+    <ex:state>California</ex:state>
+    <ex:postalCode>94709</ex:postalCode>
+    <ex:country>USA</ex:country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/EmmaAddress">
+    <ex:street>Carrer de la Guardia Civil 20</ex:street>
+    <ex:city>Valencia</ex:city>
+    <ex:postalCode>46020</ex:postalCode>
+    <ex:country>Spain</ex:country>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Emma">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name xml:lang="en">Emma</foaf:name>
+    <foaf:givenName xml:lang="en">Emma</foaf:givenName>
+    <foaf:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</foaf:age>
+    <ex:address rdf:resource="http://example.org/EmmaAddress"/>
+    <ex:degree>Master of Chemistry</ex:degree>
+    <ex:university>University of Valencia</ex:university>
+    <ex:graduationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</ex:graduationYear>
+    <ex:expertise>Waste Management</ex:expertise>
+    <ex:expertise>Toxic Waste</ex:expertise>
+    <ex:expertise>Air Pollution</ex:expertise>
+    <foaf:interest rdf:resource="http://example.org/Cycling"/>
+    <foaf:interest rdf:resource="http://example.org/Music"/>
+    <foaf:interest rdf:resource="http://example.org/Travel"/>
+    <ex:visited rdf:resource="http://example.org/Portugal"/>
+    <ex:visited rdf:resource="http://example.org/Italy"/>
+    <ex:visited rdf:resource="http://example.org/France"/>
+    <ex:visited rdf:resource="http://example.org/Germany"/>
+    <ex:visited rdf:resource="http://example.org/Denmark"/>
+    <ex:visited rdf:resource="http://example.org/Sweden"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Meeting_Paris_2014">
+    <rdf:type rdf:resource="http://example.org/Meeting"/>
+    <ex:participant rdf:resource="http://example.org/Cade"/>
+    <ex:participant rdf:resource="http://example.org/Emma"/>
+    <ex:location>Paris</ex:location>
+    <ex:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth">2014-08</ex:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/Cade">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name xml:lang="en">Cade</foaf:name>
+    <foaf:givenName xml:lang="en">Cade</foaf:givenName>
+    <ex:address rdf:resource="http://example.org/CadeAddress"/>
+    <ex:degree>Bachelor of Biology</ex:degree>
+    <ex:university>University of California</ex:university>
+    <ex:graduationYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</ex:graduationYear>
+    <foaf:interest rdf:resource="http://example.org/Birds"/>
+    <foaf:interest rdf:resource="http://example.org/Ecology"/>
+    <foaf:interest rdf:resource="http://example.org/Environment"/>
+    <foaf:interest rdf:resource="http://example.org/Photography"/>
+    <foaf:interest rdf:resource="http://example.org/Travel"/>
+    <ex:visited rdf:resource="http://example.org/Canada"/>
+    <ex:visited rdf:resource="http://example.org/France"/>
+    <foaf:knows rdf:resource="http://example.org/Emma"/>
+  </rdf:Description>
+</rdf:RDF>

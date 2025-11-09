@@ -1,0 +1,234 @@
+[
+  {
+    "@id": "http://example.org/CadeAddress",
+    "http://example.org/city": [
+      {
+        "@value": "Berkeley"
+      }
+    ],
+    "http://example.org/country": [
+      {
+        "@value": "USA"
+      }
+    ],
+    "http://example.org/postalCode": [
+      {
+        "@value": "94709"
+      }
+    ],
+    "http://example.org/state": [
+      {
+        "@value": "California"
+      }
+    ],
+    "http://example.org/street": [
+      {
+        "@value": "1516 Henry Street"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/EmmaAddress",
+    "http://example.org/city": [
+      {
+        "@value": "Valencia"
+      }
+    ],
+    "http://example.org/country": [
+      {
+        "@value": "Spain"
+      }
+    ],
+    "http://example.org/postalCode": [
+      {
+        "@value": "46020"
+      }
+    ],
+    "http://example.org/street": [
+      {
+        "@value": "Carrer de la Guardia Civil 20"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/Cade",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://example.org/address": [
+      {
+        "@id": "http://example.org/CadeAddress"
+      }
+    ],
+    "http://example.org/degree": [
+      {
+        "@value": "Bachelor of Biology"
+      }
+    ],
+    "http://example.org/graduationYear": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2011"
+      }
+    ],
+    "http://example.org/university": [
+      {
+        "@value": "University of California"
+      }
+    ],
+    "http://example.org/visited": [
+      {
+        "@id": "http://example.org/Canada"
+      },
+      {
+        "@id": "http://example.org/France"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/givenName": [
+      {
+        "@language": "en",
+        "@value": "Cade"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/interest": [
+      {
+        "@id": "http://example.org/Birds"
+      },
+      {
+        "@id": "http://example.org/Ecology"
+      },
+      {
+        "@id": "http://example.org/Environment"
+      },
+      {
+        "@id": "http://example.org/Photography"
+      },
+      {
+        "@id": "http://example.org/Travel"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/knows": [
+      {
+        "@id": "http://example.org/Emma"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "en",
+        "@value": "Cade"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/Emma",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://example.org/address": [
+      {
+        "@id": "http://example.org/EmmaAddress"
+      }
+    ],
+    "http://example.org/degree": [
+      {
+        "@value": "Master of Chemistry"
+      }
+    ],
+    "http://example.org/expertise": [
+      {
+        "@value": "Waste Management"
+      },
+      {
+        "@value": "Toxic Waste"
+      },
+      {
+        "@value": "Air Pollution"
+      }
+    ],
+    "http://example.org/graduationYear": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2015"
+      }
+    ],
+    "http://example.org/university": [
+      {
+        "@value": "University of Valencia"
+      }
+    ],
+    "http://example.org/visited": [
+      {
+        "@id": "http://example.org/Portugal"
+      },
+      {
+        "@id": "http://example.org/Italy"
+      },
+      {
+        "@id": "http://example.org/France"
+      },
+      {
+        "@id": "http://example.org/Germany"
+      },
+      {
+        "@id": "http://example.org/Denmark"
+      },
+      {
+        "@id": "http://example.org/Sweden"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/age": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 35
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/givenName": [
+      {
+        "@language": "en",
+        "@value": "Emma"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/interest": [
+      {
+        "@id": "http://example.org/Cycling"
+      },
+      {
+        "@id": "http://example.org/Music"
+      },
+      {
+        "@id": "http://example.org/Travel"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "en",
+        "@value": "Emma"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/Meeting_Paris_2014",
+    "@type": [
+      "http://example.org/Meeting"
+    ],
+    "http://example.org/date": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYearMonth",
+        "@value": "2014-08"
+      }
+    ],
+    "http://example.org/location": [
+      {
+        "@value": "Paris"
+      }
+    ],
+    "http://example.org/participant": [
+      {
+        "@id": "http://example.org/Cade"
+      },
+      {
+        "@id": "http://example.org/Emma"
+      }
+    ]
+  }
+]

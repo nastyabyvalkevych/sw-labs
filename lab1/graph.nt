@@ -1,0 +1,49 @@
+<http://example.org/CadeAddress> <http://example.org/postalCode> "94709" .
+<http://example.org/EmmaAddress> <http://example.org/street> "Carrer de la Guardia Civil 20" .
+<http://example.org/Emma> <http://xmlns.com/foaf/0.1/givenName> "Emma"@en .
+<http://example.org/Emma> <http://example.org/degree> "Master of Chemistry" .
+<http://example.org/Meeting_Paris_2014> <http://example.org/participant> <http://example.org/Emma> .
+<http://example.org/Emma> <http://example.org/visited> <http://example.org/Portugal> .
+<http://example.org/Emma> <http://xmlns.com/foaf/0.1/interest> <http://example.org/Travel> .
+<http://example.org/Emma> <http://example.org/expertise> "Air Pollution" .
+<http://example.org/CadeAddress> <http://example.org/country> "USA" .
+<http://example.org/Cade> <http://example.org/visited> <http://example.org/France> .
+<http://example.org/Emma> <http://example.org/visited> <http://example.org/Germany> .
+<http://example.org/Cade> <http://xmlns.com/foaf/0.1/knows> <http://example.org/Emma> .
+<http://example.org/CadeAddress> <http://example.org/state> "California" .
+<http://example.org/EmmaAddress> <http://example.org/postalCode> "46020" .
+<http://example.org/Meeting_Paris_2014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/Meeting> .
+<http://example.org/EmmaAddress> <http://example.org/country> "Spain" .
+<http://example.org/Emma> <http://example.org/visited> <http://example.org/France> .
+<http://example.org/EmmaAddress> <http://example.org/city> "Valencia" .
+<http://example.org/Cade> <http://xmlns.com/foaf/0.1/interest> <http://example.org/Photography> .
+<http://example.org/Cade> <http://xmlns.com/foaf/0.1/interest> <http://example.org/Birds> .
+<http://example.org/Emma> <http://example.org/visited> <http://example.org/Denmark> .
+<http://example.org/Emma> <http://xmlns.com/foaf/0.1/age> "35"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/CadeAddress> <http://example.org/street> "1516 Henry Street" .
+<http://example.org/Meeting_Paris_2014> <http://example.org/date> "2014-08"^^<http://www.w3.org/2001/XMLSchema#gYearMonth> .
+<http://example.org/Emma> <http://example.org/visited> <http://example.org/Italy> .
+<http://example.org/Cade> <http://example.org/degree> "Bachelor of Biology" .
+<http://example.org/Emma> <http://example.org/expertise> "Waste Management" .
+<http://example.org/Emma> <http://example.org/expertise> "Toxic Waste" .
+<http://example.org/Emma> <http://example.org/address> <http://example.org/EmmaAddress> .
+<http://example.org/Cade> <http://xmlns.com/foaf/0.1/name> "Cade"@en .
+<http://example.org/Cade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/CadeAddress> <http://example.org/city> "Berkeley" .
+<http://example.org/Cade> <http://xmlns.com/foaf/0.1/interest> <http://example.org/Ecology> .
+<http://example.org/Cade> <http://example.org/graduationYear> "2011"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://example.org/Emma> <http://example.org/university> "University of Valencia" .
+<http://example.org/Emma> <http://xmlns.com/foaf/0.1/name> "Emma"@en .
+<http://example.org/Emma> <http://example.org/visited> <http://example.org/Sweden> .
+<http://example.org/Emma> <http://example.org/graduationYear> "2015"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://example.org/Meeting_Paris_2014> <http://example.org/location> "Paris" .
+<http://example.org/Meeting_Paris_2014> <http://example.org/participant> <http://example.org/Cade> .
+<http://example.org/Cade> <http://xmlns.com/foaf/0.1/interest> <http://example.org/Travel> .
+<http://example.org/Cade> <http://example.org/university> "University of California" .
+<http://example.org/Cade> <http://example.org/visited> <http://example.org/Canada> .
+<http://example.org/Cade> <http://xmlns.com/foaf/0.1/interest> <http://example.org/Environment> .
+<http://example.org/Emma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/Emma> <http://xmlns.com/foaf/0.1/interest> <http://example.org/Cycling> .
+<http://example.org/Cade> <http://example.org/address> <http://example.org/CadeAddress> .
+<http://example.org/Cade> <http://xmlns.com/foaf/0.1/givenName> "Cade"@en .
+<http://example.org/Emma> <http://xmlns.com/foaf/0.1/interest> <http://example.org/Music> .

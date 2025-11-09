@@ -1,0 +1,103 @@
+@prefix : <http://example.org/sw#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Brass      rdfs:label "Латунь"@uk .
+:Copper     rdfs:label "Мідь"@uk .
+:Zinc       rdfs:label "Цинк"@uk .
+
+:SPIEGEL    rdfs:label "SPIEGEL" .
+:Hamburg    rdfs:label "Гамбург"@uk .
+:Germany    rdfs:label "Німеччина"@uk .
+
+:Essay      rdfs:label "Есе"@uk .
+:Intro      rdfs:label "Вступ"@uk .
+:Body       rdfs:label "Основна частина"@uk .
+:Conclusion rdfs:label "Висновок"@uk .
+
+:Pavlo  rdfs:label "Павло"@uk .
+:Olena  rdfs:label "Олена"@uk .
+:Stefan rdfs:label "Стефан"@uk .
+:Anna   rdfs:label "Анна"@uk .
+:Ivan   rdfs:label "Іван"@uk .
+
+:Poltava  rdfs:label "Полтава"@uk .
+:Kyiv     rdfs:label "Київ"@uk .
+:Rome     rdfs:label "Рим"@uk .
+:Italy    rdfs:label "Італія"@uk .
+
+:hasComponent a rdf:Property .
+:headquarters a rdf:Property .
+:inCountry a rdf:Property .
+:consistsOf a rdf:Property .
+:livesIn a rdf:Property .
+:knowsThat a rdf:Property .
+:says a rdf:Property .
+:thinks a rdf:Property .
+:friendOf a rdf:Property .
+:isFatherOf a rdf:Property .
+
+#Латунь — це сплав міді та цинку
+
+:Brass :hasComponent :Copper, :Zinc .
+
+#SPIEGEL — німецький інформаційний журнал зі штаб-квартирою в Гамбурзі.
+
+:SPIEGEL a :Magazine ;
+         :headquarters :Hamburg ;
+         :inCountry    :Germany .
+
+#Есе складається зі вступу, основної частини та висновку.
+
+:Essay :consistsOf :Intro, :Body, :Conclusion .
+
+#Павло знає, що Олена живе в Полтаві.
+
+# факт як об'єкт (reification):
+_:stmt1 a rdf:Statement ;
+    rdf:subject :Olena ;
+    rdf:predicate :livesIn ;
+    rdf:object :Poltava .
+
+:Pavlo :knowsThat _:stmt1 .
+
+#Олена каже, що її друг живе в Києві.
+
+# анонімний ресурс
+_:friendOfOlena :friendOf :Olena .
+
+# факт
+_:stmt2 a rdf:Statement ;
+    rdf:subject _:friendOfOlena ;
+    rdf:predicate :livesIn ;
+    rdf:object :Kyiv .
+
+:Olena :says _:stmt2 .
+
+#Стефан думає, що Анна знає, що він знає її батька.
+
+# батько Анни
+_:AnnasFather :isFatherOf :Anna .
+
+# факт 1: Стефан знає батька Анни
+_:stmt3 a rdf:Statement ;
+    rdf:subject :Stefan ;
+    rdf:predicate :knowsThat ;
+    rdf:object _:AnnasFather .
+
+# факт 2: Анна знає факт 1
+_:stmt4 a rdf:Statement ;
+    rdf:subject :Anna ;
+    rdf:predicate :knowsThat ;
+    rdf:object _:stmt3 .
+
+:Stefan :thinks _:stmt4 .
+
+#Іван знає, що Рим є столицею Італії.
+
+_:stmt5 a rdf:Statement ;
+    rdf:subject :Rome ;
+    rdf:predicate :inCountry ;
+    rdf:object :Italy .
+
+:Ivan :knowsThat _:stmt5 .

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ук">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Волонтерство — JSON-LD приклад</title>
+  <style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+       color:#1f2937;background:#f9fafb}
+  header,section,footer{max-width:980px;margin:0 auto;padding:24px}
+  header{background:#ffffff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:10}
+  h1{margin:0 0 8px;color:#0f172a}
+  h2{margin:0 0 8px;color:#111827}
+  p{margin:0 0 10px}
+  .muted{color:#475569}
+  .card{background:#ffffff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:12px 0}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media (min-width:768px){.grid{grid-template-columns:1fr 1fr}}
+  a{color:#2563eb;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .tag{display:inline-block;background:#eef2ff;color:#3730a3;border:1px solid #e0e7ff;
+       border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+</style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [{
+      "@type": "NGO",
+      "@id": "https://example.org/dobri-ruky#org",
+      "name": "ГО “Добрі Руки”",
+      "url": "https://example.org/dobri-ruky",
+      "telephone": "+380441112233",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Світла, 5",
+        "addressLocality": "Київ",
+        "addressCountry": "UA"
+      },
+      "areaServed": "Україна"
+    },{
+      "@type": "Event",
+      "name": "Суботній сортувальний хаб",
+      "startDate": "2025-11-15T10:00:00+02:00",
+      "description": "Потрібні волонтери для сортування гуманітарної допомоги.",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "isAccessibleForFree": true,
+      "location": {
+        "@type": "Place",
+        "name": "Склад “Світлий”",
+        "address": { "@type": "PostalAddress", "addressLocality": "Київ" }
+      },
+      "organizer": { "@id": "https://example.org/dobri-ruky#org" },
+      "url": "https://example.org/events/sorting-hub"
+    },{
+      "@type": "Event",
+      "name": "Освітня акція у ліцеї",
+      "startDate": "2025-11-20T14:00:00+02:00",
+      "description": "Майстер-клас з безпеки та перша допомога для підлітків.",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "isAccessibleForFree": true,
+      "location": {
+        "@type": "Place",
+        "name": "Ліцей №12",
+        "address": { "@type": "PostalAddress", "addressLocality": "Львів" }
+      },
+      "organizer": { "@id": "https://example.org/dobri-ruky#org" },
+      "url": "https://example.org/events/education-lyceum"
+    }]
+  }
+  </script>
+</head>
+<body>
+<header>
+  <h1>ГО “Добрі Руки”</h1>
+  <p class="muted">Приклад сторінки з анотаціями <strong>JSON-LD</strong>.</p>
+</header>
+
+<section class="card">
+  <h2>Хто ми</h2>
+  <p>Ми — неприбуткова організація, що координує волонтерські ініціативи.</p>
+</section>
+
+<section class="grid">
+  <article class="card">
+    <h2>Суботній сортувальний хаб</h2>
+    <p>Потребуємо волонтерів для сортування гуманітарної допомоги.</p>
+    <p><strong>Коли:</strong> 15 листопада, 10:00 (Київ)</p>
+    <p><a href="https://example.org/events/sorting-hub">Деталі та реєстрація</a></p>
+  </article>
+  <article class="card">
+    <h2>Освітня акція у ліцеї</h2>
+    <p>Майстер-клас з безпеки та перша допомога для підлітків.</p>
+    <p><strong>Коли:</strong> 20 листопада, 14:00 (Львів)</p>
+    <p><a href="https://example.org/events/education-lyceum">Деталі та реєстрація</a></p>
+  </article>
+</section>
+
+<footer>
+  <section class="card">
+    <h2>Що таке JSON-LD?</h2>
+    <p>JSON-LD вбудовується як окремий блок <code>&lt;script type="application/ld+json"&gt;</code>.</p>
+  </section>
+  <p style="padding:12px 24px">© 2025 Добрі Руки</p>
+</footer>
+</body>
+</html>

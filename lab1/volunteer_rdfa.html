@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk" prefix="schema: https://schema.org/">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Волонтерство — RDFa приклад</title>
+  <style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+       color:#1f2937;background:#f9fafb}
+  header,section,footer{max-width:980px;margin:0 auto;padding:24px}
+  header{background:#ffffff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:10}
+  h1{margin:0 0 8px;color:#0f172a}
+  h2{margin:0 0 8px;color:#111827}
+  p{margin:0 0 10px}
+  .muted{color:#475569}
+  .card{background:#ffffff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;margin:12px 0}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media (min-width:768px){.grid{grid-template-columns:1fr 1fr}}
+  a{color:#2563eb;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .tag{display:inline-block;background:#eef2ff;color:#3730a3;border:1px solid #e0e7ff;
+       border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+</style>
+</head>
+<body vocab="https://schema.org/">
+<header typeof="NGO" about="#org">
+  <section>
+    <h1 property="name">ГО “Добрі Руки”</h1>
+    <p class="muted">Приклад сторінки з анотаціями <strong>RDFa</strong>.</p>
+    <link property="url" href="https://example.org/dobri-ruky" />
+    <div typeof="PostalAddress" property="address" class="muted">
+      <span property="streetAddress">вул. Світла, 5</span>, <span property="addressLocality">Київ</span>
+    </div>
+    <a property="telephone" href="tel:+380441112233">+380 44 111 22 33</a>
+  </section>
+</header>
+
+<section class="grid">
+  <article class="card" typeof="Event">
+    <h2><span property="name">Суботній сортувальний хаб</span></h2>
+    <p property="description">Потрібні волонтери для сортування гуманітарної допомоги.</p>
+    <p>Початок: <time property="startDate" datetime="2025-11-15T10:00:00+02:00">15 листопада, 10:00</time></p>
+    <div typeof="Place" property="location">
+      <strong property="name">Склад “Світлий”</strong> —
+      <span typeof="PostalAddress" property="address">
+        <span property="addressLocality">Київ</span>
+      </span>
+    </div>
+    <link property="eventStatus" href="https://schema.org/EventScheduled" />
+    <meta property="isAccessibleForFree" content="true" />
+    <a property="url" href="https://example.org/events/sorting-hub">Деталі та реєстрація</a>
+    <link property="organizer" href="#org" />
+  </article>
+
+  <article class="card" typeof="Event">
+    <h2><span property="name">Освітня акція у ліцеї</span></h2>
+    <p property="description">Майстер-клас з безпеки та перша допомога для підлітків.</p>
+    <p>Початок: <time property="startDate" datetime="2025-11-20T14:00:00+02:00">20 листопада, 14:00</time></p>
+    <div typeof="Place" property="location">
+      <strong property="name">Ліцей №12</strong> —
+      <span typeof="PostalAddress" property="address">
+        <span property="addressLocality">Львів</span>
+      </span>
+    </div>
+    <link property="eventStatus" href="https://schema.org/EventScheduled" />
+    <meta property="isAccessibleForFree" content="true" />
+    <a property="url" href="https://example.org/events/education-lyceum">Деталі та реєстрація</a>
+    <link property="organizer" href="#org" />
+  </article>
+</section>
+
+<section class="card">
+  <h2>Що таке RDFa?</h2>
+  <p>RDFa додає атрибути <code>vocab</code>, <code>typeof</code>, <code>property</code>, <code>about</code> до HTML-елементів.</p>
+</section>
+
+<footer>
+  <p style="padding:12px 24px">© 2025 Добрі Руки</p>
+</footer>
+</body>
+</html>

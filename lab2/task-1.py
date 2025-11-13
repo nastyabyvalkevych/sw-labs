@@ -1,13 +1,23 @@
-# pip install SPARQLWrapper pandas
+# Напишіть SPARQL запит, який буде повертати чисельність населення кожної з країн
+# Східної Європи. Результат запиту необхідно впорядкувати за спадінням чисельності
+# населення країн.
+
 from SPARQLWrapper import SPARQLWrapper, JSON
 import pandas as pd
+
+
+# wd:Q27468 — «Східна Європа».
+# wdt:P527 — підмножина країн, що входять до регіону.
+# wdt:P31 wd:Q6256 — гарантує, що частини є саме країнами.
+# wdt:P1082 — «населення»
 
 QUERY = """
 SELECT ?country ?countryLabel ?population WHERE {
   wd:Q27468 wdt:P527 ?country .
   ?country wdt:P31 wd:Q6256 .
   ?country wdt:P1082 ?population .
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "uk,en". }
+  ?country rdfs:label ?countryLabel .
+  FILTER (LANG(?countryLabel) = "uk")
 }
 ORDER BY DESC(?population)
 """

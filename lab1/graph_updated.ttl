@@ -50,7 +50,8 @@ ex:Emma a foaf:Person ;
         ex:Italy,
         ex:Portugal,
         ex:Sweden ;
-    foaf:age 36 ;
+    foaf:age 36,
+        1990 ;
     foaf:givenName "Emma"@en ;
     foaf:interest ex:Cycling,
         ex:Music,

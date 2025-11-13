@@ -10,6 +10,7 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 import pandas as pd
 
+# P31 частина  країни (Q6256 = country)
 QUERY = """
 SELECT ?countryLabel
        (COALESCE(GROUP_CONCAT(DISTINCT ?langName; separator="|"), "") AS ?languages)

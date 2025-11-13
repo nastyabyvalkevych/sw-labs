@@ -28,25 +28,27 @@
     ]
   },
   {
-    "@id": "http://example.org/EmmaAddress",
-    "http://example.org/city": [
+    "@id": "http://example.org/Meeting_Paris_2014",
+    "@type": [
+      "http://example.org/Meeting"
+    ],
+    "http://example.org/date": [
       {
-        "@value": "Valencia"
+        "@type": "http://www.w3.org/2001/XMLSchema#gYearMonth",
+        "@value": "2014-08"
       }
     ],
-    "http://example.org/country": [
+    "http://example.org/location": [
       {
-        "@value": "Spain"
+        "@value": "Paris"
       }
     ],
-    "http://example.org/postalCode": [
+    "http://example.org/participant": [
       {
-        "@value": "46020"
-      }
-    ],
-    "http://example.org/street": [
+        "@id": "http://example.org/Cade"
+      },
       {
-        "@value": "Carrer de la Guardia Civil 20"
+        "@id": "http://example.org/Emma"
       }
     ]
   },
@@ -120,6 +122,29 @@
     ]
   },
   {
+    "@id": "http://example.org/EmmaAddress",
+    "http://example.org/city": [
+      {
+        "@value": "Valencia"
+      }
+    ],
+    "http://example.org/country": [
+      {
+        "@value": "Spain"
+      }
+    ],
+    "http://example.org/postalCode": [
+      {
+        "@value": "46020"
+      }
+    ],
+    "http://example.org/street": [
+      {
+        "@value": "Carrer de la Guardia Civil 20"
+      }
+    ]
+  },
+  {
     "@id": "http://example.org/Emma",
     "@type": [
       "http://xmlns.com/foaf/0.1/Person"
@@ -179,7 +204,7 @@
     "http://xmlns.com/foaf/0.1/age": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#integer",
-        "@value": 35
+        "@value": 1990
       }
     ],
     "http://xmlns.com/foaf/0.1/givenName": [
@@ -203,31 +228,6 @@
       {
         "@language": "en",
         "@value": "Emma"
-      }
-    ]
-  },
-  {
-    "@id": "http://example.org/Meeting_Paris_2014",
-    "@type": [
-      "http://example.org/Meeting"
-    ],
-    "http://example.org/date": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#gYearMonth",
-        "@value": "2014-08"
-      }
-    ],
-    "http://example.org/location": [
-      {
-        "@value": "Paris"
-      }
-    ],
-    "http://example.org/participant": [
-      {
-        "@id": "http://example.org/Cade"
-      },
-      {
-        "@id": "http://example.org/Emma"
       }
     ]
   }

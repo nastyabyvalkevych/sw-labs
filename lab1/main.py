@@ -1,4 +1,4 @@
-from rdflib import Graph, Namespace, Literal, URIRef
+from rdflib import Graph, Namespace, Literal
 from rdflib.namespace import RDF, FOAF, XSD
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -54,7 +54,7 @@ g.add((emma, FOAF.givenName, Literal("Emma", lang="en")))
 # Вік Емми (буде змінено пізніше на 36)
 current_year = datetime.now().year
 birth_year = current_year - 35  # спочатку 35, потім зміним на 36
-g.add((emma, FOAF.age, Literal(35, datatype=XSD.integer)))
+g.add((emma, FOAF.age, Literal(birth_year, datatype=XSD.integer)))
 
 # Адреса Емми
 emma_address = EX.EmmaAddress
@@ -69,7 +69,7 @@ g.add((emma, EX.degree, Literal("Master of Chemistry")))
 g.add((emma, EX.university, Literal("University of Valencia")))
 g.add((emma, EX.graduationYear, Literal(2015, datatype=XSD.gYear)))
 
-# Експертиза Емми
+# Сфера щзнань Емми
 g.add((emma, EX.expertise, Literal("Waste Management")))
 g.add((emma, EX.expertise, Literal("Toxic Waste")))
 g.add((emma, EX.expertise, Literal("Air Pollution")))
@@ -149,10 +149,7 @@ print("СЕРИАЛІЗАЦІЯ ГРАФУ У РІЗНІ ФОРМАТИ")
 print("=" * 70)
 
 formats = {
-    'turtle': 'graph.ttl',
     'xml': 'graph.rdf',
-    'n3': 'graph.n3',
-    'nt': 'graph.nt',
     'json-ld': 'graph.jsonld'
 }
 
